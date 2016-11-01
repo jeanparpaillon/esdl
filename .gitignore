@@ -1,7 +1,12 @@
 # git ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 *~
+*.app
 .DS_Store
 *.beam
 doc/*.html
 c_src/*.o
+
+/.erlang.mk
+/c_src/env.mk
+/esdl.d

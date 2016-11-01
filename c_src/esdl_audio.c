@@ -23,6 +23,9 @@ struct {
    Uint8 silence;
 } wave;
 
+void myaudiomixer(void *, Uint8 *, int);
+void es_loadWAVRW(sdl_data *, int, char *);
+
 void play_audio(sdl_data *sd, int len, char *buff) 
 {
    char *bp, *start;

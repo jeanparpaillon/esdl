@@ -33,6 +33,11 @@ void * esdl_result;
 void * esdl_gl_main_loop(void * );
 int es_init_opengl2(ErlDrvPort, ErlDrvTermData, char *bp);
 
+void DisplayErrorMsg(void);
+void stop_opengl_thread(void);
+void * esdl_gl_sync(void);
+
+
 typedef struct {
    ErlDrvTermData caller;
    int op;
@@ -149,7 +154,7 @@ int es_init_opengl2(ErlDrvPort port, ErlDrvTermData caller, char *bp) {
    rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
    rt[2] = ERL_DRV_INT; rt[3] = res;
    rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-   driver_send_term(port,caller,rt,6);   
+   erl_drv_send_term(driver_mk_port(port),caller,rt,6);   
    return res;
 }
 

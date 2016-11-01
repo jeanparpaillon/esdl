@@ -18,6 +18,8 @@
 #endif
 
 static size_t do_mac_file_dialog(char* buf, char* res, size_t res_size);
+void print_rect(SDL_Rect *);
+void es_setClipping(sdl_data *, int, char *);
 
 void es_setVideoMode(sdl_data *sd, int len, char* bp) 
 {
@@ -43,7 +45,7 @@ void es_setVideoMode2(ErlDrvPort port, ErlDrvTermData caller, char* bp)
    rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
    rt[2] = ERL_DRV_UINT;  rt[3] = (ErlDrvUInt) screen;
    rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-   driver_send_term(port,caller,rt,6);
+   erl_drv_send_term(driver_mk_port(port),caller,rt,6);
 }
 
 void es_videoDriverName(sdl_data *sd, int len, char *buff)
@@ -130,7 +132,7 @@ void es_videoModeOK2(ErlDrvPort port, ErlDrvTermData caller, char *buff)
    rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
    rt[2] = ERL_DRV_INT; rt[3] = res;
    rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-   driver_send_term(port,caller,rt,6);
+   erl_drv_send_term(driver_mk_port(port),caller,rt,6);
 }
 
 
@@ -773,7 +775,7 @@ void es_wm_toggleFullScreen2(ErlDrvPort port, ErlDrvTermData caller, char *buff)
     rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
     rt[2] = ERL_DRV_INT; rt[3] = res;
     rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-    driver_send_term(port,caller,rt,6);
+    erl_drv_send_term(driver_mk_port(port),caller,rt,6);
 }
 
 
@@ -822,7 +824,7 @@ void es_wm_getInfo2(ErlDrvPort port, ErlDrvTermData caller, char *buff)
    rt[8] = ERL_DRV_UINT; rt[9] = 0;
 #endif
    rt[10] = ERL_DRV_TUPLE; rt[11] = 5;
-   driver_send_term(port,caller,rt,12);
+   erl_drv_send_term(driver_mk_port(port),caller,rt,12);
 }
 
 void es_wm_isMaximized(sdl_data *sd, int len, char *buff)
@@ -914,7 +916,7 @@ void es_wm_mac_file_dialog2(ErlDrvPort port, ErlDrvTermData caller, char *buf)
     rt[5] = ERL_DRV_TUPLE;
     rt[6] = 2;
 
-    driver_send_term(port, caller, rt, 7);
+    erl_drv_send_term(driver_mk_port(port), caller, rt, 7);
 }
 
 
@@ -963,7 +965,7 @@ void es_gl_getAttribute2(ErlDrvPort port, ErlDrvTermData caller, char *buff)
     rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
     rt[2] = ERL_DRV_INT; rt[3] = val;
     rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-    driver_send_term(port,caller,rt,6);
+    erl_drv_send_term(driver_mk_port(port),caller,rt,6);
 }
 
 

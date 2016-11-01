@@ -57,6 +57,8 @@ static ErlDrvSSizeT sdl_driver_debug_control(ErlDrvData handle, unsigned int com
 
 static void standard_outputv(ErlDrvData drv_data, ErlIOVec *ev);
 
+void esdl_init_native_gui(void);
+
 /*
 ** The driver struct
 */

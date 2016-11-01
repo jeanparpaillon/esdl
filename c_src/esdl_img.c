@@ -14,6 +14,37 @@
 #include <stdlib.h>
 #include <SDL_image.h>
 
+void es_img_linkedVersion(sdl_data *, int, char *);
+void es_img_loadTypedRW(sdl_data *, int, char *);
+void es_img_load(sdl_data *, int, char *);
+void es_img_loadRW(sdl_data *, int, char *);
+void es_img_invertAlpha(sdl_data *, int, char *);
+void es_img_isBMP(sdl_data *, int, char *);
+void es_img_isPNM(sdl_data *, int, char *);
+void es_img_isXPM(sdl_data *, int, char *);
+void es_img_isXCF(sdl_data *, int, char *);
+void es_img_isPCX(sdl_data *, int, char *);
+void es_img_isGIF(sdl_data *, int, char *);
+void es_img_isJPG(sdl_data *, int, char *);
+void es_img_isTIF(sdl_data *, int, char *);
+void es_img_isPNG(sdl_data *, int, char *);
+void es_img_isLBM(sdl_data *, int, char *);
+void es_img_loadBMPRW(sdl_data *, int, char *);
+void es_img_loadPNMRW(sdl_data *, int, char *);
+void es_img_loadXPMRW(sdl_data *, int, char *);
+void es_img_loadXCFRW(sdl_data *, int, char *);
+void es_img_loadPCXRW(sdl_data *, int, char *);
+void es_img_loadGIFRW(sdl_data *, int, char *);
+void es_img_loadJPGRW(sdl_data *, int, char *);
+void es_img_loadTIFRW(sdl_data *, int, char *);
+void es_img_loadPNGRW(sdl_data *, int, char *);
+void es_img_loadTGARW(sdl_data *, int, char *);
+void es_img_loadLBMRW(sdl_data *, int, char *);
+void es_img_readXPMFromArray(sdl_data *, int, char *);
+void es_img_setError(sdl_data *, int, char *);
+void es_img_getError(sdl_data *, int, char *);
+
+
 void es_img_linkedVersion(sdl_data *sd, int len, char *buff)
 {
    char *bp, *start;

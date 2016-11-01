@@ -58,7 +58,7 @@ void es_peepEvents2(ErlDrvPort port, ErlDrvTermData caller, char *bp)
     rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");
     rt[2] = ERL_DRV_BINARY; rt[3] = (ErlDrvTermData) bin; rt[4] = sz; rt[5] = 0;
     rt[6] = ERL_DRV_TUPLE; rt[7] = 2;
-    driver_send_term(port,caller,rt,8);
+    erl_drv_send_term(driver_mk_port(port),caller,rt,8);
     driver_free_binary(bin);
 }
 
@@ -89,7 +89,7 @@ void es_pollEvent2(ErlDrvPort port, ErlDrvTermData caller)
     rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
     rt[2] = ERL_DRV_BINARY; rt[3] = (ErlDrvTermData) bin; rt[4] = sz; rt[5] = 0;
     rt[6] = ERL_DRV_TUPLE; rt[7] = 2;
-    driver_send_term(port,caller,rt,8);
+    erl_drv_send_term(driver_mk_port(port),caller,rt,8);
     driver_free_binary(bin);
 }
 
@@ -119,7 +119,7 @@ void es_waitEvent2(ErlDrvPort port, ErlDrvTermData caller)
     rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");  
     rt[2] = ERL_DRV_BINARY; rt[3] = (ErlDrvTermData) bin; rt[4] = sz; rt[5] = 0;
     rt[6] = ERL_DRV_TUPLE; rt[7] = 2;
-    driver_send_term(port,caller,rt,8);
+    erl_drv_send_term(driver_mk_port(port),caller,rt,8);
     driver_free_binary(bin);
 }
 
@@ -354,7 +354,7 @@ void es_showCursor2(ErlDrvPort port, ErlDrvTermData caller, char *bp)
    rt[0] = ERL_DRV_ATOM; rt[1]=driver_mk_atom((char *) "_esdl_result_");
    rt[2] = ERL_DRV_INT; rt[3] = bool;
    rt[4] = ERL_DRV_TUPLE; rt[5] = 2;
-   driver_send_term(port,caller,rt,6);
+   erl_drv_send_term(driver_mk_port(port),caller,rt,6);
 }
 
 void es_numJoysticks(sdl_data *sd, int len,char *buff)

@@ -14,6 +14,46 @@
 #include <stdlib.h>
 #include <SDL_ttf.h>
 
+void es_ttf_linkedVersion(sdl_data *, int, char *);
+void es_ttf_byteSwappedUNICODE(sdl_data *, int, char *);
+void es_ttf_init(sdl_data *, int, char *);
+void es_ttf_openFont(sdl_data *, int, char *);
+void es_ttf_openFontIndex(sdl_data *, int, char *);
+void es_ttf_openFontRW(sdl_data *, int, char *);
+void es_ttf_openFontIndexRW(sdl_data *, int, char *);
+void es_ttf_getFontStyle(sdl_data *, int, char *);
+void es_ttf_setFontStyle(sdl_data *, int, char *);
+void es_ttf_fontHeight(sdl_data *, int, char *);
+void es_ttf_fontAscent(sdl_data *, int, char *);
+void es_ttf_fontDescent(sdl_data *, int, char *);
+void es_ttf_fontLineSkip(sdl_data *, int, char *);
+void es_ttf_fontFaces(sdl_data *, int, char *);
+void es_ttf_fontFaceIsFixedWidth(sdl_data *, int, char *);
+void es_ttf_fontFaceFamilyName(sdl_data *, int, char *);
+void es_ttf_fontFaceStyleName(sdl_data *, int, char *);
+void es_ttf_glyphMetrics(sdl_data *, int, char *);
+void es_ttf_sizeText(sdl_data *, int, char *);
+void es_ttf_sizeUTF8(sdl_data *, int, char *);
+void es_ttf_sizeUNICODE(sdl_data *, int, char *);
+void es_ttf_renderTextSolid(sdl_data *, int, char *);
+void es_ttf_renderUTF8Solid(sdl_data *, int, char *);
+void es_ttf_renderUNICODESolid(sdl_data *, int, char *);
+void es_ttf_renderGlyphSolid(sdl_data *, int, char *);
+void es_ttf_renderTextShaded(sdl_data *, int, char *);
+void es_ttf_renderUTF8Shaded(sdl_data *, int, char *);
+void es_ttf_renderUNICODEShaded(sdl_data *, int, char *);
+void es_ttf_renderGlyphShaded(sdl_data *, int, char *);
+void es_ttf_renderTextBlended(sdl_data *, int, char *);
+void es_ttf_renderUTF8Blended(sdl_data *, int, char *);
+void es_ttf_renderUNICODEBlended(sdl_data *, int, char *);
+void es_ttf_renderGlyphBlended(sdl_data *, int, char *);
+void es_ttf_closeFont(sdl_data *, int, char *);
+void es_ttf_quit(sdl_data *, int, char *);
+void es_ttf_wasInit(sdl_data *, int, char *);
+void es_ttf_setError(sdl_data *, int, char *);
+void es_ttf_getError(sdl_data *, int, char *);
+
+
 void es_ttf_linkedVersion(sdl_data *sd, int len, char *buff)
 {
    char *bp, *start;

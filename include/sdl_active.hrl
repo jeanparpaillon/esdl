@@ -12,6 +12,11 @@
 %%% Created : 12 Jul 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_ACTIVE_HRL).
+-define(_SDL_ACTIVE_HRL, true).
+
 -define(SDL_APPMOUSEFOCUS,	16#01). %/* The app has mouse coverage */
 -define(SDL_APPINPUTFOCUS,	16#02). %/* The app has input focus */
 -define(SDL_APPACTIVE,		16#04). %/* The application is active */
+
+-endif.

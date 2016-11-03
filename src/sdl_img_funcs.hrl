@@ -12,6 +12,9 @@
 %%% Created : 18 Feb 2007 by Klas Johansson <klajo at users.sourceforge.net>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_IMG_FUNCS_HRL).
+-define(_SDL_IMG_FUNCS_HRL, true).
+
 %%% Functions  
 -include("esdl.hrl").
 
@@ -44,3 +47,5 @@
 -define(SDL_IMG_ReadXPMFromArray,      ?SDL_IMG_LoadLBMRW + 1).
 -define(SDL_IMG_SetError,              ?SDL_IMG_ReadXPMFromArray + 1).
 -define(SDL_IMG_GetError,              ?SDL_IMG_SetError + 1).
+
+-endif.

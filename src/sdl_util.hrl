@@ -12,7 +12,10 @@
 %%% Created : 13 Sep 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_UTIL_HRL).
+-define(_SDL_UTIL_HRL, true).
 
 -record(sdlmem, {bin, size, type}).
 -define(_PTR, 64/unsigned-native).
 
+-endif.

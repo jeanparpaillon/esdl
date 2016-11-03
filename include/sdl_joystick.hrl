@@ -12,6 +12,9 @@
 %%% Created : 19 Apr 2001 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_JOYSTICK_HRL).
+-define(_SDL_JOYSTICK_HRL, true).
+
 -define( SDL_HAT_CENTERED,	16#00).
 -define( SDL_HAT_UP,		16#01).
 -define( SDL_HAT_RIGHT,		16#02).
@@ -22,3 +25,4 @@
 -define( SDL_HAT_LEFTUP,	(?SDL_HAT_LEFT  bor ?SDL_HAT_UP)).
 -define( SDL_HAT_LEFTDOWN,	(?SDL_HAT_LEFT  bor ?SDL_HAT_DOWN)).
 
+-endif.

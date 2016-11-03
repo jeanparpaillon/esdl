@@ -12,6 +12,8 @@
 %%% Created : 7 Jul 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_EVENTS_HRL).
+-define(_SDL_EVENTS_HRL, true).
 
 -define(SDL_QUERY,	-1).  %% Arg to eventState function
 -define(SDL_IGNORE,	 0).
@@ -154,3 +156,4 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
+-endif.

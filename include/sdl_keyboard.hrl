@@ -12,6 +12,9 @@
 %%% Created : 7 Jul 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_KEYBOARD_HRL).
+-define(_SDL_KEYBOARD_HRL, true).
+
 -define(SDL_DEFAULT_REPEAT_DELAY,	500).
 -define(SDL_DEFAULT_REPEAT_INTERVAL,	30).
 
@@ -282,3 +285,4 @@
 -define(KMOD_ALT,       (?KMOD_LALT   bor ?KMOD_RALT)).
 -define(KMOD_META,      (?KMOD_LMETA  bor ?KMOD_RMETA)).
 
+-endif.

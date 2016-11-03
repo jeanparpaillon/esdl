@@ -12,6 +12,9 @@
 %%% Created : 30 Aug 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_VIDEO_FUNCS_HRL).
+-define(_SDL_VIDEO_FUNCS_HRL, true).
+
 %%% Functions  
 -include("esdl.hrl").
 
@@ -88,3 +91,5 @@
 -define(SDL_DisplayFormatAlpha,   ?SDL_SetClipRect + 1).
 -define(SDL_WM_Maximize,          ?SDL_DisplayFormatAlpha +1).
 -define(SDL_WM_MacFileDialog,     ?SDL_WM_Maximize +1).
+
+-endif.

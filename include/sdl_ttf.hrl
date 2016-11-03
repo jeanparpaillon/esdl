@@ -12,6 +12,9 @@
 %%% Created : 29 Jan 2007 by Klas Johansson <klajo at users.sourceforge.net>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_TTF_HRL).
+-define(_SDL_TTF_HRL, true).
+
 -record(ttf_font, {ptr}).
 
 %% ZERO WIDTH NO-BREAKSPACE (Unicode byte order mark)
@@ -23,4 +26,4 @@
 -define(SDL_TTF_STYLE_ITALIC,    16#02).
 -define(SDL_TTF_STYLE_UNDERLINE, 16#04).
 
-
+-endif.

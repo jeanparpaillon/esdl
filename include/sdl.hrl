@@ -12,6 +12,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% sdl.h
 
+-ifndef(_SDL_HRL).
+-define(_SDL_HRL, true).
+
 -define(SDL_INIT_TIMER,       16#00000001).
 -define(SDL_INIT_AUDIO,       16#00000010).
 -define(SDL_INIT_VIDEO,       16#00000020).
@@ -66,3 +69,5 @@
 -define(SDL_4_BYTES, 16#1409).
 -define(SDL_DOUBLE, 16#140A).
 -define(SDL_DOUBLE_EXT, 16#140A).
+
+-endif.

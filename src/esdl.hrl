@@ -9,7 +9,8 @@
 %%% Created :  6 Oct 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
--ifndef(SDL_HRL).  %% These must exactly match those in c_src/esdl.h
+-ifndef(_ESDL_HRL).  %% These must exactly match those in c_src/esdl.h
+-define(_ESDL_HRL, true).
 
 -define(SDL_HRL,                    20).
 -define(SDL_VIDEO_HRL,              30).

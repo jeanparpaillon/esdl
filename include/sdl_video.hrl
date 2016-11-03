@@ -12,6 +12,9 @@
 %%% Created : 22 Jun 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_VIDEO_HRL).
+-define(_SDL_VIDEO_HRL, true).
+
 %% Statics
 
 %% Data Types 
@@ -139,3 +142,4 @@
 -define(SDL_GL_SWAP_CONTROL,       16).
 
 
+-endif.

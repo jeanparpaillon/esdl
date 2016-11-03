@@ -12,6 +12,9 @@
 %%% Created : 9 Aug 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_AUDIO_HRL).
+-define(_SDL_AUDIO_HRL, true).
+
 %% Data Types 
 
 -record(audiospec,
@@ -34,3 +37,4 @@
 -define(AUDIO_U16SYS,	16#FFF1). %% Native audio ordering 
 -define(AUDIO_S16SYS,	16#FFF0). 
 
+-endif.

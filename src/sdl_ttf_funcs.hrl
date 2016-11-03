@@ -12,6 +12,9 @@
 %%% Created : 29 Jan 2007 by Klas Johansson <klajo at users.sourceforge.net>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_TTF_FUNCS_HRL).
+-define(_SDL_TTF_FUNCS_HRL, true).
+
 %%% Functions  
 -include("esdl.hrl").
 
@@ -53,3 +56,5 @@
 -define(SDL_TTF_WasInit,              ?SDL_TTF_Quit + 1).
 -define(SDL_TTF_SetError,             ?SDL_TTF_WasInit + 1).
 -define(SDL_TTF_GetError,             ?SDL_TTF_SetError + 1).
+
+-endif.

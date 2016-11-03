@@ -12,6 +12,9 @@
 %%% Created : 12 Jul 2000 by Dan Gudmundsson <dgud@erix.ericsson.se>
 %%%----------------------------------------------------------------------
 
+-ifndef(_SDL_MOUSE_HRL).
+-define(_SDL_MOUSE_HRL, true).
+
 -define(SDL_BUTTON_LEFT,	1).
 -define(SDL_BUTTON_MIDDLE,	2).
 -define(SDL_BUTTON_RIGHT,	3).
@@ -23,3 +26,4 @@
 -define(SDL_BUTTON_X1MASK,      2#01000).
 -define(SDL_BUTTON_X2MASK,      2#10000).
 
+-endif.

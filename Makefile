@@ -1,10 +1,15 @@
-PROJECT = esdl
+PROJECT = sdl
 PROJECT_VERSION = 1.3.1
 
 C_SRC_OUTPUT = $(CURDIR)/priv/sdl_driver
 
-SDL_CFLAGS = $(shell pkg-config sdl --cflags) -D_USE_SDL_TTF -D_USE_SDL_IMAGE
-SDL_LDFLAGS = $(shell pkg-config sdl --libs)
+ifeq ($(NERVES_SDK_SYSROOT),)
+SDL_CONFIG=$(which sdl-config)
+else
+SDL_CONFIG=$(NERVES_SDK_SYSROOT)/usr/bin/sdl-config
+endif
+SDL_CFLAGS = $(shell $(SDL_CONFIG) --cflags) -D_USE_SDL_TTF -D_USE_SDL_IMAGE
+SDL_LDFLAGS = $(shell $(SDL_CONFIG) --libs)
 SDL_LDLIBS = -lSDL_ttf -lSDL_image
 
 include erlang.mk

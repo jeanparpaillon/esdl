@@ -10,3 +10,4 @@ c_src/*.o
 /.erlang.mk
 /c_src/env.mk
 /esdl.d
+/.rebar3

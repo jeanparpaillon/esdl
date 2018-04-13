@@ -1,4 +1,4 @@
-PROJECT = sdl
+PROJECT = esdl
 PROJECT_VERSION = 1.3.1
 
 C_SRC_OUTPUT = $(CURDIR)/priv/sdl_driver

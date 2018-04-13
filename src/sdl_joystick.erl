@@ -14,11 +14,26 @@
 
 -module(sdl_joystick).
 
--compile(export_all).
 -include("esdl.hrl").
 -include("sdl_joystick.hrl").
 -include("sdl_util.hrl").
 -import(sdl, [call/2,cast/2]).
+
+-export([numJoysticks/0,
+	 name/1,
+	 open/1,
+	 opened/1,
+	 index/1,
+	 numAxes/1,
+	 numBalls/1,
+	 numHats/1,
+	 numButtons/1,
+	 update/0,
+	 getAxis/2,
+	 getHat/2,
+	 getButton/2,
+	 getBall/2,
+	 close/1]).
 
 -define(SDL_NumJoysticks,       ?SDL_JOYSTICK_HRL   + 1).
 -define(SDL_JoystickName,       ?SDL_NumJoysticks   + 1).     

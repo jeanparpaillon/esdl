@@ -12,12 +12,19 @@
 
 -module(sdl_audio).
 
--compile(export_all).
-
 -include("esdl.hrl").
 -include("sdl_util.hrl").
 
 %% Functions 
+-export([audioDrivername/0,
+	 openAudio/2,
+	 closeAudio/0,
+	 getAudioStatus/0,
+	 pauseAudio/1,
+	 loadWAV/1,
+	 freeWAV/1,
+	 play_audio/2,
+	 convertAudio/3]).
 
 -define(SDL_AudioDriverName, ?SDL_AUDIO_HRL +1).
 -define(SDL_OpenAudio, ?SDL_AudioDriverName +1).
